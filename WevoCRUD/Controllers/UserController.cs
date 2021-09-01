@@ -60,6 +60,27 @@ namespace WevoCRUD.Controllers
             return CreatedAtRoute("GetUser", new { id = user.Id }, user);
         }
 
+        // Método que para ditar o usuário
+        [HttpPut]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<ActionResult<User>> UpdateUser([FromBody] User user)
+        {
+            if (user is null)
+                return BadRequest("Usuário inválido");
+
+            return Ok(await _repository.UpdateUser(user));
+        }
+
+        //Método para deletar usuário
+        [HttpDelete("{id: length(24)}", Name = "DeleteUser")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+
+        public async Task<ActionResult<User>> DeleteUserById(string id)
+        {
+            return Ok(await _repository.DeleteUser(id));
+        }
 
     }
 }
