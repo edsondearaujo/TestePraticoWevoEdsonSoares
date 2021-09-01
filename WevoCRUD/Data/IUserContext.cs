@@ -8,6 +8,7 @@ namespace WevoCRUD.Data
 {
     public interface IUserContext
     {
+        //definição da Coleção de usuários
         IMongoCollection<User> Users { get; }
     }
 }
