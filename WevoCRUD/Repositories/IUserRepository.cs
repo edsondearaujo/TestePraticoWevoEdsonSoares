@@ -1,17 +1,19 @@
-using System.Runtime.InteropServices;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using MongoDB.Driver;
+using WevoCRUD.Entities;
 
-// Nos projetos no estilo SDK como este, vários atributos de assembly que sempre eram
-// definidos nesse arquivo agora são adicionados automaticamente durante o build e
-// populados com os valores definidos nas propriedades do projeto. Para obter detalhes
-// de quais atributos são incluídos e como personalizar esse processo, confira: https://aka.ms/assembly-info-properties
-
-
-// A definição de ComVisible como false torna os tipos neste assembly invisíveis para
-// os componentes do COM. Se for necessário acessar um tipo do COM neste assembly,
-// defina o atributo ComVisible como true nesse tipo.
-
-[assembly: ComVisible(false)]
-
-// O GUID a seguir será destinado à ID de typelib se este projeto for exposto ao COM.
-
-[assembly: Guid("d394e793-e3cf-4c2f-a222-d72a50972f09")]
+namespace WevoCRUD.Repositories
+{
+    public interface IUserRepository
+    {
+        Task<IEnumerable<User>> GetUsers();
+        Task<User> GetUser(string id);
+        Task<IEnumerable<User>> GetUserByName(string name);
+        
+        Task CreatUser(User user);
+        Task<bool> UpdateUser(User user);
+        Task<bool> DeleteUser(string id);
+    }
+}
