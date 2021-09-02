@@ -3,8 +3,8 @@
 &emsp;&emsp;Este repositório é dedicado ao desenvolvimento do teste prático da Wevo Tecnologia, em seu Processo Seletivo realizado no mês de Agosto de 2021.
 
 &emsp;&emsp;O teste consiste em:
-- criar uma tabela no Banco de Dados.
-- Expor um conjunto de Web APIs (REST/Json) utilizando ASP .NET que possibilitem a
+- [criar uma tabela](https://github.com/edsondearaujo/TestePraticoWevoEdsonSoares/blob/devel/assets/DBwevo.png) no Banco de Dados.
+- [Expor um conjunto de Web APIs](https://github.com/edsondearaujo/TestePraticoWevoEdsonSoares/blob/devel/assets/swagger_func.png) (REST/Json) utilizando ASP .NET que possibilitem a
 manutenção do Cadastro de Usuários, com base na tabela criada no exercício. Estas APIs
 deverão possibilitar a Consulta, Inclusão, Atualização e Exclusão dos dados (CRUD).
 - Criar uma interface (orientação à objetos) e implementá-la no código, utilizando-a em pelo
