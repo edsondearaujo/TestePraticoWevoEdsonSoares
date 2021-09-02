@@ -4,7 +4,7 @@
 
 &emsp;&emsp;O teste consiste em:
 - [criar uma tabela](https://github.com/edsondearaujo/TestePraticoWevoEdsonSoares/blob/devel/assets/DBwevo.png) no Banco de Dados.
-- [Expor um conjunto de Web APIs]() (REST/Json) utilizando ASP .NET que possibilitem a
+- [Expor um conjunto de Web APIs](https://github.com/edsondearaujo/TestePraticoWevoEdsonSoares/blob/devel/assets/swagger_func.png) (REST/Json) utilizando ASP .NET que possibilitem a
 manutenção do Cadastro de Usuários, com base na tabela criada no exercício. Estas APIs
 deverão possibilitar a Consulta, Inclusão, Atualização e Exclusão dos dados (CRUD).
 - Criar uma interface (orientação à objetos) e implementá-la no código, utilizando-a em pelo
