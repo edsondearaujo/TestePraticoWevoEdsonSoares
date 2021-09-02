@@ -8,7 +8,7 @@ using WevoCRUD.Repositories;
 namespace WevoCRUD.Controllers
 {
     // Criação da API
-    [Route("Api/v1/User")]
+    [Route("Api/v1/[controller]")]
     [ApiController]
 
     public class UserController : ControllerBase
@@ -24,7 +24,6 @@ namespace WevoCRUD.Controllers
 
         //  Definindo métodos assíncronos
         [HttpGet]
-        //[Route("Api/v1/[controller]")]
         [ProducesResponseType(typeof(IEnumerable<User>), StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -34,7 +33,6 @@ namespace WevoCRUD.Controllers
 
         // Método de acesso por Id
         [HttpGet("{id: length(24)}", Name = "GetUser")]
-        //[Route("Api/v1/[controller]")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
 
@@ -50,7 +48,6 @@ namespace WevoCRUD.Controllers
 
         // Método para criar usuário
         [HttpGet("Api/v1/User")]
-        //[Route("Api/v1/[controller]")]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
@@ -66,7 +63,6 @@ namespace WevoCRUD.Controllers
 
         // Método para editar o usuário
         [HttpPut]
-        //[Route("Api/v1/[controller]")]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
@@ -80,7 +76,6 @@ namespace WevoCRUD.Controllers
 
         //Método para deletar usuário
         [HttpDelete("{id: length(24)}", Name = "DeleteUser")]
-        //[Route("Api/v1/[controller]")]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
 
         public async Task<ActionResult<User>> DeleteUserById(string id)
